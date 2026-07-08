@@ -46,3 +46,74 @@ Then place it at:
 
 ```text
 data/raw/C4591001_protocol.pdf
+```
+
+## Local Setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/zoiiliadou/clinical-protocol-rag-assistant.git
+cd clinical-protocol-rag-assistant
+```
+
+Create and activate a virtual environment:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run ingestion:
+
+```bash
+python src/ingest.py
+```
+
+Start the FastAPI backend:
+
+```bash
+uvicorn app.api.main:app --reload
+```
+
+Start the Streamlit frontend in a second terminal:
+
+```bash
+streamlit run frontend/streamlit_app.py
+```
+
+Open the application:
+
+```text
+http://localhost:8501
+```
+
+## Usage
+
+Ask a question from the CLI:
+
+```bash
+python src/ask.py "What is the dosing schedule?"
+```
+
+Run evaluation:
+
+```bash
+python evaluation/run_evaluation.py
+```
+
+Run API tests while the backend is running:
+
+```bash
+python evaluation/api_test.py
+```
+
+## Disclaimer
+
+This software is designed strictly as a personal portfolio project and local prototype. It does not replace professional medical advice, clinical diagnosis, clinical trial review, regulatory evaluation, or human expert judgment.
