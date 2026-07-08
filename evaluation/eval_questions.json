@@ -1,0 +1,50 @@
+[
+  {
+    "id": "q1_pregnancy_exclusion",
+    "question": "what are the exclusion criteria for pregnant women?",
+    "expected_keywords": [
+      "pregnant",
+      "breastfeeding",
+      "excluded"
+    ]
+  },
+  {
+    "id": "q2_inclusion_criteria",
+    "question": "What are the inclusion criteria for participants?",
+    "expected_keywords": [
+      "eligible",
+      "inclusion criteria",
+      "male or female",
+      "scheduled visits"
+    ]
+  },
+  {
+    "id": "q3_study_design",
+    "question": "What is the study design?",
+    "expected_keywords": [
+      "randomized",
+      "placebo-controlled",
+      "observer-blind",
+      "dose-finding"
+    ]
+  },
+  {
+    "id": "q4_dosing_schedule",
+    "question": "What is the dosing schedule?",
+    "expected_keywords": [
+      "Vaccination 1",
+      "Vaccination 2",
+      "19 to 23 days",
+      "56 to 70 days"
+    ]
+  },
+  {
+    "id": "q5_no_answer_hospital_cost",
+    "question": "What is the hospital admission cost?",
+    "expected_keywords": [
+      "could not find enough evidence",
+      "protocol",
+      "answer this question"
+    ]
+  }
+]
