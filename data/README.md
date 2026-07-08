@@ -2,7 +2,7 @@
 
 This folder is used for local project data.
 
-The protocol PDF is not included in this repository.
+The protocol PDF is not included in this repository due to file size and licensing considerations.
 
 To run the project locally, download the public protocol PDF:
 
