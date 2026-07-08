@@ -9,6 +9,18 @@ Protocol source: https://www.nejm.org/doi/suppl/10.1056/NEJMoa2034577/suppl_file
 
 This is a personal portfolio project and a local medical document exploration prototype. It is not intended for clinical decision-making.
 
+
+## Screenshots
+
+### Application Overview
+
+![Application Overview](assets/screenshots/app-overview.png)
+
+### Answer and AI/NLP Analysis
+
+![Answer and AI/NLP Analysis](assets/screenshots/app-answer-analysis.png)
+
+
 ## Key Features
 
 - Hybrid RAG retrieval using ChromaDB semantic search and BM25 keyword search
