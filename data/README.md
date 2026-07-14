@@ -12,3 +12,6 @@ Then place it at:
 
 ```text
 data/raw/C4591001_protocol.pdf
+```
+
+The generated vector store and audit database are also kept locally and are not included in the repository.
