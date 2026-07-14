@@ -1,0 +1,28 @@
+services:
+  api:
+    build: .
+    image: clinical-trial-matching-engine-api:latest
+    container_name: clinical-rag-api
+    command: uvicorn app.api.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./.cache/huggingface:/root/.cache/huggingface
+    environment:
+      - PYTHONPATH=/app
+
+  frontend:
+    image: clinical-trial-matching-engine-api:latest
+    container_name: clinical-rag-frontend
+    command: streamlit run frontend/streamlit_app.py --server.address=0.0.0.0 --server.port=8501
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./.cache/huggingface:/root/.cache/huggingface
+    environment:
+      - API_BASE_URL=http://api:8000
+      - PYTHONPATH=/app
+    depends_on:
+      - api
