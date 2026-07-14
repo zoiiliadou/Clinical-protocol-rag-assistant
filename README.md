@@ -4,8 +4,7 @@ Local AI/RAG assistant for clinical protocol question answering.
 
 The system indexes a clinical trial protocol PDF and allows users to ask natural language questions about study design, eligibility criteria, dosing schedules, safety monitoring, adverse events, and follow-up procedures.
 
-Local application after running locally: http://localhost:8501
-
+Local application after running locally: http://localhost:8501        
 Protocol source: https://www.nejm.org/doi/suppl/10.1056/NEJMoa2034577/suppl_file/nejmoa2034577_protocol.pdf
 
 This is a personal portfolio project and a local medical document exploration prototype. It is not intended for clinical decision-making.
