@@ -4,7 +4,7 @@ Local AI/RAG assistant for clinical protocol question answering.
 
 The system indexes a clinical trial protocol PDF and allows users to ask natural language questions about study design, eligibility criteria, dosing schedules, safety monitoring, adverse events, and follow-up procedures.
 
-Local application: http://localhost:8501  
+Local application after running locally: http://localhost:8501
 Protocol source: https://www.nejm.org/doi/suppl/10.1056/NEJMoa2034577/suppl_file/nejmoa2034577_protocol.pdf
 
 This is a personal portfolio project and a local medical document exploration prototype. It is not intended for clinical decision-making.
@@ -45,6 +45,7 @@ This is a personal portfolio project and a local medical document exploration pr
 - Sentence Transformers
 - BM25
 - SQLite
+- Docker
 
 ## Protocol PDF
 
@@ -105,6 +106,48 @@ Open the application:
 ```text
 http://localhost:8501
 ```
+
+## Docker Setup
+
+The project can also be run with Docker.
+
+Before running Docker, download the public clinical trial protocol PDF and place it at:
+
+```text
+data/raw/C4591001_protocol.pdf
+```
+
+Build the Docker image:
+
+```bash
+docker compose build
+```
+
+Run ingestion inside Docker:
+
+```bash
+docker compose run --rm --no-deps api python src/ingest.py
+```
+
+Start the FastAPI backend and Streamlit frontend:
+
+```bash
+docker compose up --no-build
+```
+
+Open the Streamlit application locally:
+
+```text
+http://localhost:8501
+```
+
+The FastAPI documentation is available at:
+
+```text
+http://localhost:8000/docs
+```
+
+The protocol PDF, vector store, local cache, and audit database are not included in the repository.
 
 ## Usage
 
